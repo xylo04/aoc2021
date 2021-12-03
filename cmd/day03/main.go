@@ -14,6 +14,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	gamma, epsilon := diagnostic.Report(string(file))
-	fmt.Printf("Gamma %d, epsilon %d; power consumption %d", gamma, epsilon, gamma*epsilon)
+	rep := diagnostic.CalcReport(string(file))
+	fmt.Printf("%+v", rep)
 }

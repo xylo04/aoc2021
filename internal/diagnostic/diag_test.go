@@ -6,14 +6,10 @@ func TestReport(t *testing.T) {
 	type args struct {
 		rep string
 	}
-	type returns struct {
-		gamma   uint
-		epsilon uint
-	}
 	tests := []struct {
 		name string
 		args args
-		want returns
+		want DiagReport
 	}{
 		{
 			name: "website",
@@ -29,15 +25,18 @@ func TestReport(t *testing.T) {
 11001
 00010
 01010`},
-			want: returns{gamma: 22, epsilon: 9},
+			want: DiagReport{
+				Gamma:        22,
+				Epsilon:      9,
+				PowerConsume: 198,
+			},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotG, gotE := Report(tt.args.rep)
-			got := returns{gotG, gotE}
+			got := CalcReport(tt.args.rep)
 			if got != tt.want {
-				t.Errorf("Report() got = %v, want %v", got, tt.want)
+				t.Errorf("CalcReport() got = %v, want %v", got, tt.want)
 			}
 		})
 	}

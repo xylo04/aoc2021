@@ -5,7 +5,13 @@ import (
 	"strings"
 )
 
-func Report(rep string) (uint, uint) {
+type DiagReport struct {
+	Gamma        uint
+	Epsilon      uint
+	PowerConsume uint
+}
+
+func CalcReport(rep string) DiagReport {
 	numbers := strings.Split(rep, "\n")
 	if numbers[len(numbers)-1] == "" {
 		numbers = numbers[:len(numbers)-1]
@@ -31,5 +37,9 @@ func Report(rep string) (uint, uint) {
 
 	gamma, _ := strconv.ParseInt(gammaStr, 2, 32)
 	epsilon, _ := strconv.ParseInt(epsilonStr, 2, 32)
-	return uint(gamma), uint(epsilon)
+	return DiagReport{
+		Gamma:        uint(gamma),
+		Epsilon:      uint(epsilon),
+		PowerConsume: uint(gamma * epsilon),
+	}
 }
