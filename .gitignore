@@ -16,3 +16,6 @@
 
 # IDE
 .idea
+
+# puzzle inputs and outputs
+*.txt
