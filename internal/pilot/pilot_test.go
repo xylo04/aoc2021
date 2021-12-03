@@ -24,7 +24,7 @@ func TestParse(t *testing.T) {
 				"up 3",
 				"down 8",
 				"forward 2"}},
-			want: returns{15, 10},
+			want: returns{15, 60},
 		},
 	}
 	for _, tt := range tests {
