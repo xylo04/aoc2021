@@ -29,6 +29,9 @@ func TestReport(t *testing.T) {
 				Gamma:        22,
 				Epsilon:      9,
 				PowerConsume: 198,
+				O2Gen:        23,
+				CO2Scrub:     10,
+				LifeSupport:  230,
 			},
 		},
 	}
