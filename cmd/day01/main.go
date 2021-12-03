@@ -25,6 +25,6 @@ func main() {
 		depths = append(depths, uint(dep))
 	}
 
-	inc := depth.Increases(depths)
+	inc := depth.IncreaseWindowSum(depths)
 	fmt.Printf("There were %d increases in depth", inc)
 }
