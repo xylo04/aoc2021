@@ -54,17 +54,22 @@ func ParseGame(in string) Game {
 }
 
 func (g *Game) Play() Board {
+	var lastWin *Board
 	for i, ball := range g.Balls {
-		for _, board := range g.Boards {
+		for j := 0; j < len(g.Boards); j++ {
+			board := &g.Boards[j]
+			if board.WinsInRound > 0 {
+				continue
+			}
 			win := board.Turn(ball)
 			if win {
 				board.WinsInRound = uint(i + 1)
 				board.TallyScore(ball)
-				return board
+				lastWin = board
 			}
 		}
 	}
-	return Board{}
+	return *lastWin
 }
 
 func (b *Board) Turn(ball uint) bool {
