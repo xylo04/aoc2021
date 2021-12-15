@@ -47,6 +47,13 @@ func TestParseGame(t *testing.T) {
 							{6, 10, 3, 18, 5},
 							{1, 12, 20, 15, 19},
 						},
+						Marked: [][]bool{
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+						},
 					},
 					{
 						NumberGrid: [][]uint{
@@ -56,6 +63,13 @@ func TestParseGame(t *testing.T) {
 							{20, 11, 10, 24, 4},
 							{14, 21, 16, 12, 6},
 						},
+						Marked: [][]bool{
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+						},
 					},
 					{
 						NumberGrid: [][]uint{
@@ -64,6 +78,13 @@ func TestParseGame(t *testing.T) {
 							{18, 8, 23, 26, 20},
 							{22, 11, 13, 6, 5},
 							{2, 0, 12, 3, 7},
+						},
+						Marked: [][]bool{
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
 						},
 					},
 				},
@@ -102,6 +123,13 @@ func TestGame_Play(t *testing.T) {
 							{6, 10, 3, 18, 5},
 							{1, 12, 20, 15, 19},
 						},
+						Marked: [][]bool{
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+						},
 					},
 					{
 						NumberGrid: [][]uint{
@@ -111,6 +139,13 @@ func TestGame_Play(t *testing.T) {
 							{20, 11, 10, 24, 4},
 							{14, 21, 16, 12, 6},
 						},
+						Marked: [][]bool{
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+						},
 					},
 					{
 						NumberGrid: [][]uint{
@@ -119,6 +154,13 @@ func TestGame_Play(t *testing.T) {
 							{18, 8, 23, 26, 20},
 							{22, 11, 13, 6, 5},
 							{2, 0, 12, 3, 7},
+						},
+						Marked: [][]bool{
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
+							{false, false, false, false, false},
 						},
 					},
 				},
